@@ -219,9 +219,7 @@
 .mobile__price .info__check.check.desktop,
 .desktop__price .info__check.check.mobile,
 .mobile__price .info__check.text.desktop,
-.desktop__price .info__check.text.mobile,
-.mobile__price .tabl .info__descr.desktop,
-.desktop__price .tabl .info__descr.mobile {
+.desktop__price .info__check.text.mobile {
   display: none;
 }
 .packs {
@@ -395,7 +393,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  height: 61px;
+  height: 60px;
   font-weight: bold;
   font-size: 14px;
   line-height: 14px;
@@ -423,10 +421,12 @@
 .detailing .pack__block.mvp:before {
   content: none;
 }
-.detailing .pack__block.business {
+.detailing .pack__block.business,
+.addons .pack__block:last-child {
   margin-right: 0;
 }
-.detailing .pack__block_title {
+.detailing .pack__block_title,
+.addons .pack__block_title {
   height: 80px;
   line-height: 80px;
   font-size: 20px;
@@ -440,6 +440,7 @@
   color: #4A4A4A;
 }
 .pack__block_info {
+  box-sizing: border-box;
   position: relative;
   display: inline-flex;
   flex-direction: column;
@@ -523,10 +524,6 @@
 .detailing .btn__buy {
   margin: 40px 0 0;
 }
-
-
-
-
 .packs__lines {
   position: absolute;
   top: 685px;
@@ -544,75 +541,30 @@
   bottom: 0;
   z-index: 1;
 }
-.addons__title {
-  width: 1080px;
-  text-align: left;
-  padding-left: 225px;
-  margin-bottom: 15px;
-  border: none;
-  background: none;
-}
 .addons {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.addons__block.titles {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 200px;
-  margin-right: 30px;
-  padding-top: 30px;
+.addons .titles {
+  width: 270px;
 }
-.addons__block {
-  display: flex;
-  flex-direction: column;
+.addons .titles h6.first {
+  margin-bottom: 0;
 }
-.tabl {
-  width: 1010px;
-  padding: 30px;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+.addons .pack__block  {
+  max-width: 250px;
+  margin-right: 50px;
+  padding: 80px 25px 35px;
 }
-.tabl__block_info {
-  display: flex;
-  justify-content: space-between;
-  height: 42px;
-}
-.tabl__info.info__title {
-  display: none;
-}
-.tabl .info__descr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(50% - 10px);
-  border-top: 1px solid #D8D8D8;
-}
-.tabl .tabl__info_first .info__descr {
-  border-top: none;
-}
-.addons .titles h6 {
-  height: 42px;
-}
+
+
 
 #plan { display: none; }
 
 @media screen and (max-width: 1330px) {
   .detailing .pack__blocks {
     max-width: 790px;
-  }
-  .addons__title {
-    width: 790px;
-    padding-left: 225px;
-  }
-  .tabl {
-    width: 100%;
-    max-width: 740px;
-    padding: 25px;
   }
 }
 @media screen and (max-width: 1220px) {
@@ -657,7 +609,7 @@
   .info__check.text {
     line-height: 24px;
   }
-  .packs {
+  .packs, .addons {
     width: 100%;
     max-width: 540px;
     justify-content: space-between;
@@ -665,38 +617,7 @@
   .section__packs_title {
     margin-bottom: 40px;
   }
-  .section__packs_title.addons__title {
-    width: 540px;
-    padding-left: 0;
-    margin-bottom: 20px;
-  }
-  .addons__block.titles {
-    display: none;
-  }
-  .tabl__info.info__title {
-    display: inline;
-    margin-bottom: 5px;
-  }
-  .tabl {
-    width: calc(100% - 50px);
-    max-width: 490px;
-    padding: 15px 25px;
-  }
-  .tabl .info__descr {
-    border-top: none;
-    margin-bottom: 5px;
-  }
-  .tabl__block_info {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    border-top: 1px solid #D8D8D8;
-    padding: 12px 0 5px;
-  }
-  .tabl__block_info.tabl__info_first {
-    border-top: none;
-  }
-  .pack__blocks {
+  .pack__blocks, .addons {
     flex-direction: column;
     padding: 0;
     margin-bottom: 60px;
@@ -706,7 +627,8 @@
     max-width: 100%;
     margin: 0 0 20px;
   }
-  .detailing .pack__block {
+  .detailing .pack__block,
+  .addons .pack__block {
     max-width: 100%;
     margin-right: 0;
     padding: 120px 25px 30px;
@@ -757,19 +679,11 @@
     max-width: 260px;
     margin-bottom: 10px;
   }
+  .addons {
+    max-width: 260px;
+  }
   .section__packs_title {
     font-size: 30px;
-  }
-  .tabl {
-    width: calc(100% - 50px);
-    max-width: 210px;
-  }
-  .section__packs_title.addons__title {
-    width: 100%;
-    text-align: center;
-  }
-  .tabl .info__descr {
-    white-space: nowrap;
   }
   .pack__block {
     padding: 100px 20px 6px;
