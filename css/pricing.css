@@ -93,13 +93,14 @@
   z-index: 1;
 }
 
-.section__plans{
+.section__packs {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 150px;
 }
-.section__plans_title {
+.section__packs_title {
   font-family: 'EkibastuzBlack';
   font-weight: normal;
   font-size: 36px;
@@ -201,7 +202,7 @@
   transform: translateX(84px);
 }
 
-.plans {
+.packs {
   position: relative;
   display: flex;
   justify-content: center;
@@ -265,28 +266,159 @@
   text-align: right;
   color: #4A4A4A;
 }
+.pack__blocks {
+  display: flex;
+  width: 100%;
+  max-width: 1230px;
+  margin-bottom: 166px;
+  padding: 0 63px;
+}
+.pack__block {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 33.33%;
+  max-width: 390px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-right: 30px;
+  background: #fff;
+  padding: 122px 38px 6px;
+  z-index: 2;
+ }
+ .pack__block.mvp:before {
+  content: url(../img/pricing/star.svg);
+  position: absolute;
+  top: 0;
+  right: 22px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  width: 31px;
+  height: 27px;
+  background: #fff;
+  box-shadow: 0px 0px 8px #fff;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 75%, 0 100%);
+  z-index: 3;
+}
+.pack__block.business {
+  margin-right: 0;
+}
+ .pack__block_title {
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  font-family: 'EkibastuzBlack';
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 104px;
+  color: #fff;
+  left: 0;
+  top: 0;
+  background: #00A2B8;
+  border-radius: 10px;
+ }
+ .mvp .pack__block_title {
+  background: linear-gradient(98.43deg, #8702C6 35.68%, #F1187D 103.79%);
+}
+.pack__block_time {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #00A2B8;
+  margin-bottom: 44px;
+}
+.mvp .pack__block_time {
+  color: #bb11a3;
+}
+.pack__block_descr {
+  height: 70px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #828282;
+  margin-bottom: 30px;
+}
+.pack__block_price {
+  font-family: 'EkibastuzBlack';
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: #4A4A4A;
+  margin-bottom: 30px;
+}
+.pack__block_price span{
+  font-family: 'Ekibastuz';
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 32px;
+}
+.btn__buy {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  background: #00A2B8;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-family: 'EkibastuzBlack';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.btn__buy:hover {
+  color: #fff;
+  background: #00A2B8;
+  opacity: 0.9;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.35);
+}
+.mvp .btn__buy {
+  background: linear-gradient(98.43deg, #8702C6 35.68%, #F1187D 103.79%);
+}
+.mvp .btn__buy:hover {
+  background: linear-gradient(98.43deg, #8702C6 35.68%, #F1187D 103.79%);
+}
+.pack__block_conditions {
+  display: flex;
+  flex-direction: column;
+}
+.condition {
+  display: inline-flex;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: #828282;
+  margin-bottom: 24px;
+  text-align: start;
+  display: inline-flex;
+}
+.mark {
+  display: inline-block;
+  min-width: 20px;
+  height: 15px;
+  background: url(../img/pricing/mark.svg);
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
 .plan__blocks {
   display: flex;
   width: 100%;
   max-width: 1060px;
 }
-.plan__block.startup {
+.plan__block.mvp {
   position: relative;
   box-shadow: 0px 0px 8px #AB34F4;
-}
-.plan__block.startup:before {
-  content: url(../img/pricing/star.svg);
-  position: absolute;
-  top: -33px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 31px;
-  height: 30px;
-  padding-bottom: 3px;
-  background: #AB34F4;
-  box-shadow: 0px 0px 8px #AB34F4;
-  clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 .plan__block.business {
   margin-right: 0;
@@ -302,7 +434,7 @@
   color: #888;
   padding-top: 40px;
 }
-.startup .plan__block_title {
+.mvp .plan__block_title {
   color: #AB34F4;
 }
 .plan__block_price {
@@ -329,7 +461,7 @@
   color: #fff;
   margin-bottom: 20px;
 }
-.startup .plan__block_time {
+.mvp .plan__block_time {
   background: linear-gradient(100.89deg, #7E00CC 32.32%, #F91A77 105.6%);
 }
 .plan__block_descr {
@@ -408,7 +540,7 @@
   width: 14px;
   z-index: 2;
 }
-.startup .info__check.check {
+.mvp .info__check.check {
   background: #AB34F4;
 }
 .info__check.text {
@@ -423,33 +555,8 @@
   text-transform: capitalize;
   color: #6C6C6C;
 }
-.btn__buy {
-  width: 200px;
-  height: 40px;
-  background: #00A2B8;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  font-family: 'EkibastuzBlack';
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #fff;
-  margin-top: 10px;
-  margin-bottom: 37px;
-}
-.btn__buy:hover {
-  color: #fff;
-  background: #00A2B8;
-}
-.startup .btn__buy {
-  background: linear-gradient(98.43deg, #8702C6 35.68%, #F1187D 103.79%);
-}
-.startup .btn__buy:hover {
-  background: linear-gradient(98.43deg, #8702C6 35.68%, #F1187D 103.79%);
-}
-.plan__lines {
+
+.packs__lines {
   position: absolute;
   top: 500px;
   width: 100%;
@@ -545,9 +652,18 @@
   .pricing__page .hero__descr {
     max-width: 265px;
   }
+  .pack__blocks {
+    padding: 0 15px;
+  }
+  .pack__block {
+    margin-right: 15px;
+  }
+  .radio__switch {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 1100px) {
-  .plan__lines {
+  .packs__lines {
     display: none;
   }
   .plan__blocks {
@@ -562,13 +678,13 @@
   .info__check.check {
     background: transparent;
   }
-  .startup .info__check.check:after {
+  .mvp .info__check.check:after {
     content: url(../img/pricing/checked_mob_st.svg);
   }
   .info__check.check:after {
     content: url(../img/pricing/checked_mob.svg);
   }
-  .startup .info__check.check {
+  .mvp .info__check.check {
     background: transparent;
   }
   .plan__block_info {
@@ -583,12 +699,12 @@
     margin-right: 0;
     margin-bottom: 24px;
   }
-  .plans {
+  .packs {
     width: 100%;
     max-width: 540px;
     justify-content: space-between;
   }
-  .plan__block.startup:before {
+  .plan__block.mvp:before {
     content: url(../img/pricing/star_mob.svg);
     top: 15px;
     width: 14px;
@@ -602,10 +718,10 @@
     height: 55px;
     padding-top: 35px;
   }
-  .section__plans_title {
+  .section__packs_title {
     margin-bottom: 40px;
   }
-  .section__plans_title.addons__title {
+  .section__packs_title.addons__title {
     width: 540px;
     padding-left: 0;
     margin-bottom: 20px;
@@ -636,6 +752,15 @@
   .tabl__block_info.tabl__info_first {
     border-top: none;
   }
+  .pack__blocks {
+    flex-direction: column;
+    padding: 0;
+  }
+  .pack__block {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px;
+}
 }
 @media screen and (max-width: 1020px) {
   .section__ways {
@@ -678,11 +803,11 @@
   }
 }
 @media screen and (max-width: 590px) {
-  .plans {
+  .packs {
     max-width: 260px;
     margin-bottom: 10px;
   }
-  .section__plans_title {
+  .section__packs_title {
     font-size: 30px;
   }
   .plan__block {
@@ -692,12 +817,40 @@
     width: calc(100% - 50px);
     max-width: 210px;
   }
-  .section__plans_title.addons__title {
+  .section__packs_title.addons__title {
     width: 100%;
     text-align: center;
   }
   .tabl .info__descr {
     white-space: nowrap;
+  }
+  .pack__block {
+    padding: 100px 20px 6px;
+  }
+  .pack__block_title {
+    font-size: 18px;
+    line-height: 80px;
+  }
+  .pack__block_time {
+    margin-bottom: 20px;
+  }
+  .pack__block_descr {
+    height: auto;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
+  .pack__block_price {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .pack__block_price span {
+    font-size: 26px;
+  }
+  .condition {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 560px) {
@@ -721,10 +874,10 @@
     height: 360px;
     bottom: 0px;
   }
-  .section__plans {
+  .section__packs {
     margin-bottom: 70px;
   }
-  .section__plans_title {
+  .section__packs_title {
     margin-bottom: 20px;
   }
   .radio__switch {

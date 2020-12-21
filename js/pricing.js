@@ -1,14 +1,14 @@
 $(document).ready(function(){
 	// radio btn click 
 	$('.label1').click(function() {
-		$('.plans').addClass('mobile__price');
-		$('.plans').removeClass('desktop__price');
+		$('.packs').addClass('mobile__price');
+		$('.packs').removeClass('desktop__price');
 		$('.addons').addClass('mobile__price');
 		$('.addons').removeClass('desktop__price');
 	});
 	$('.label2').click(function() {
-		$('.plans').addClass('desktop__price');
-		$('.plans').removeClass('mobile__price');
+		$('.packs').addClass('desktop__price');
+		$('.packs').removeClass('mobile__price');
 		$('.addons').addClass('desktop__price');
 		$('.addons').removeClass('mobile__price');
 	});
@@ -32,31 +32,31 @@ $(document).ready(function(){
 			$('.notsend__message').removeClass('active');
 	});
 
-	$('#buy_btn_concept').click(function() {
-		if ($('.plans').hasClass('desktop__price')) {
+	$('.btn__buy_concept').click(function() {
+		if ($('.packs').hasClass('desktop__price')) {
 			var formPlan = 'Desktop Concept';
 		}
-		if ($('.plans').hasClass('mobile__price')) {
+		if ($('.packs').hasClass('mobile__price')) {
 			var formPlan = 'Mobile Concept';
 		}
 		$(formBuyTitle).text(formPlan);
 	  	$(inputPlan).val(formPlan);
 	});
-	$('#buy_btn_mvp').click(function() {
-		if ($('.plans').hasClass('desktop__price')) {
+	$('.btn__buy_mvp').click(function() {
+		if ($('.packs').hasClass('desktop__price')) {
 			var formPlan = 'Desktop MVP';
 		}
-		if ($('.plans').hasClass('mobile__price')) {
+		if ($('.packs').hasClass('mobile__price')) {
 			var formPlan = 'Mobile MVP';
 		}
 		$(formBuyTitle).text(formPlan);
 	  	$(inputPlan).val(formPlan);
 	});
-	$('#buy_btn_business').click(function() {
-		if ($('.plans').hasClass('desktop__price')) {
+	$('.btn__buy_business').click(function() {
+		if ($('.packs').hasClass('desktop__price')) {
 			var formPlan = 'Desktop Business';
 		}
-		if ($('.plans').hasClass('mobile__price')) {
+		if ($('.packs').hasClass('mobile__price')) {
 			var formPlan = 'Mobile Business';
 		}
 		$(formBuyTitle).text(formPlan);
@@ -173,10 +173,10 @@ $(document).ready(function(){
 	    // Sets the value of the 'Content-Type' HTTP request headers to 'application/json'
 	    xhr.setRequestHeader('Content-Type', 'application/json');
 	    xhr.onreadystatechange = function() {
-				if ($('.plans').hasClass('desktop__price')) {
+				if ($('.packs').hasClass('desktop__price')) {
 					var devicePlanBuy = 'Desktop Business';
 				}
-				if ($('.plans').hasClass('mobile__price')) {
+				if ($('.packs').hasClass('mobile__price')) {
 					var devicePlanBuy = 'Mobile Business';
 				}
 				if(xhr.readyState == 4 && xhr.status == 200) { 

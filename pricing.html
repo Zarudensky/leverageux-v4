@@ -108,22 +108,77 @@
 				</div>
 			</section>
 
-			<section class="content__section section__plans">
-				<!-- <div class="ways__lines"></div> -->
-				<h2 class="section__plans_title">Design Packs</h2>
+			<section class="content__section section__packs">
+				<h2 class="section__packs_title">Design Packs</h2>
 				<div class="title__line"></div>
 				<ul class="radio__switch">
 				  <li class="radio__switch-item">
-				    <input class="radio__switch-input" type="radio" name="radioButton" id="radio1" checked>
+				    <input class="radio__switch-input" type="radio" name="radioButton" id="radio1">
 				    <label class="radio__switch-label label1" for="radio1"><span class="rsl__txt-mob">Mobile</span></label>
 				  </li>
 				  <li class="radio__switch-item">
-				    <input class="radio__switch-input" type="radio" name="radioButton" id="radio2">
+				    <input class="radio__switch-input" type="radio" name="radioButton" id="radio2" checked>
 				    <label class="radio__switch-label label2" for="radio2"><span class="rsl__txt-desk">Desktop</span></label>
 				    <div aria-hidden="true" class="radio__switch-marker"></div>
 				  </li>
 				</ul>
-				<div class="plans mobile__price">
+				<div class="packs desktop__price">
+					<div class="pack__blocks">
+						<div class="pack__block concept">
+							<h4 class="pack__block_title desktop">Desktop Concept</h5>
+							<h4 class="pack__block_title mobile">Mobile Concept</h5>
+							<span class="pack__block_time desktop">6-8 weeks</span>
+							<span class="pack__block_time mobile">4-5 weeks</span>
+							<p class="pack__block_descr">If you already have the idea and want to make a basic design to share the concept with your partners or to pitch it to investor, this pack is ideal for you.</p>
+							<p class="pack__block_price desktop"><span>$</span>4790</p>
+							<p class="pack__block_price mobile"><span>$</span>3790</p>
+							<button class="btn btn__buy btn__buy_concept" type="submit">Buy Now</button>
+							<div class="pack__block_conditions">
+								<p class="condition"><span class="mark"></span><span>Up to 5 screens + interactions.</span></p>
+								<p class="condition"><span class="mark"></span><span>2 different design concepts + 2 revisions.</span></p>
+								<p class="condition"><span class="mark"></span><span>Ideal to pitch your idea/concept to investors, potential customers.</span></p>
+								<p class="condition"><span class="mark"></span><span>Clickable prototype to show real experience.</span></p>
+							</div>
+						</div>
+						<div class="pack__block mvp">
+							<h4 class="pack__block_title desktop">Desktop MVP</h5>
+							<h4 class="pack__block_title mobile">Mobile MVP</h5>
+							<span class="pack__block_time desktop">12-14 weeks</span>
+							<span class="pack__block_time mobile">8-10 weeks</span>
+							<p class="pack__block_descr">If you want to get to the market quickly, effectively and on budget, this pack is for you.</p>
+							<p class="pack__block_price desktop"><span>$</span>14790</p>
+							<p class="pack__block_price mobile"><span>$</span>12790</p>
+							<button class="btn btn__buy btn__buy_mvp" type="submit">Buy Now</button>
+							<div class="pack__block_conditions">
+								<p class="condition"><span class="mark"></span>Up to 15 screens + interactions.</p>
+								<p class="condition"><span class="mark"></span>2 different design concepts + 2 revisions.</p>
+								<p class="condition"><span class="mark"></span>Weekly sprint planning.</p>
+								<p class="condition"><span class="mark"></span>Market research.</p>
+								<p class="condition"><span class="mark"></span>Responsive design.</p>
+								<p class="condition"><span class="mark"></span>Clickable prototype to show real experience.</p>
+							</div>
+						</div>
+						<div class="pack__block business">
+							<h4 class="pack__block_title mobile">Mobile Business</h5>
+							<h4 class="pack__block_title desktop">Desktop Business</h5>
+							<span class="pack__block_time">Custom</span>
+							<p class="pack__block_descr">Do you want a custom solution that will help to attract more customers and  increase revenue? Book a free call with us and get a full clarity on the timing and budget for your project.</p>
+							<p class="pack__block_price desktop"><span>$</span>37790</p>
+							<p class="pack__block_price mobile"><span>$</span>30790</p>
+							<button class="btn btn__buy btn__buy_business" type="submit">Buy Now</button>
+							<div class="pack__block_conditions">
+								<p class="condition"><span class="mark"></span>Up to 30 screens + interactions.</p>
+								<p class="condition"><span class="mark"></span>2 different design concepts + 2 revisions.</p>
+								<p class="condition"><span class="mark"></span>Weekly sprint planning.</p>
+								<p class="condition"><span class="mark"></span>UX research & strategy, market research.</p>
+								<p class="condition"><span class="mark"></span>Responsive design.</p>
+								<p class="condition"><span class="mark"></span>Clickable prototype to show real experience.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="packs__lines"></div>
+				<div class="packs plans desktop__price">
 					<div class="titles">
 						<h6>Number of Screens</h6>
 						<h6 class="delete_for_desktop">App Layout</h6>
@@ -205,9 +260,9 @@
 								<h6 class="info__title">Development Support</h6>
 								<div class="info__check none"></div>
 							</div>
-							<button class="btn btn__buy" type="submit" id="buy_btn_concept">Buy Now</button>
+							<button class="btn btn__buy btn__buy_concept" type="submit">Buy Now</button>
 						</div>
-						<div class="plan__block startup">
+						<div class="plan__block mvp">
 							<h5 class="plan__block_title mobile">Mobile MVP</h5>
 							<h5 class="plan__block_title desktop">Desktop MVP</h5>
 							<p class="plan__block_price mobile">$7790</p>
@@ -274,7 +329,7 @@
 								<div class="info__check text desktop">8 Weeks</div>
 								<div class="info__check text mobile">5 Weeks</div>
 							</div>
-							<button class="btn btn__buy" type="submit" id="buy_btn_mvp">Buy Now</button>
+							<button class="btn btn__buy btn__buy_mvp" type="submit">Buy Now</button>
 						</div>
 						<div class="plan__block business">
 							<h5 class="plan__block_title mobile">Mobile Business</h5>
@@ -340,10 +395,9 @@
 								<h6 class="info__title">Development Support</h6>
 								<div class="info__check text">Optional</div>
 							</div>
-							<button class="btn btn__buy" type="submit" id="buy_btn_business">Buy Now</button>
+							<button class="btn btn__buy btn__buy_business" type="submit">Buy Now</button>
 						</div>
 					</div>
-					<!-- <div class="plan__lines"></div> -->
 					<div id="buyModal" class="modal">
 						<div class="modal-content">
 							<span class="close">
@@ -371,8 +425,8 @@
 						<div class="modal__back"></div>
 					</div>
 				</div>
-				<h2 class="section__plans_title addons__title">Addons</h2>
-				<div class="addons mobile__price">
+				<h2 class="section__packs_title addons__title">Addons</h2>
+				<div class="addons desktop__price">
 					<div class="addons__block titles">
 						<h6>Custom Illustration</h6>
 						<h6 class="delete_for_desktop">Store Marketing Graphics<br>for Mobile Apps</h6>
