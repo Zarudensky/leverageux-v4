@@ -1,16 +1,38 @@
 $(document).ready(function(){
+	// packs mobile menu 
+	$('.pm__concept').click(function() {
+		$('.concept, .pm__concept, .btn__buy_concept').addClass('active');
+		$('.mvp, .pm__mvp, .btn__buy_mvp').removeClass('active');
+		$('.business, .pm__business, .btn__buy_business').removeClass('active');
+		$('.detailing').addClass('dt__concept');
+		$('.detailing').removeClass('dt__mvp');
+		$('.detailing').removeClass('dt__business');
+	});
+	$('.pm__mvp').click(function() {
+		$('.concept, .pm__concept, .btn__buy_concept').removeClass('active');
+		$('.mvp, .pm__mvp, .btn__buy_mvp').addClass('active');
+		$('.business, .pm__business, .btn__buy_business').removeClass('active');
+		$('.detailing').removeClass('dt__concept');
+		$('.detailing').addClass('dt__mvp');
+		$('.detailing').removeClass('dt__business');
+	});
+	$('.pm__business').click(function() {
+		$('.concept, .pm__concept, .btn__buy_concept').removeClass('active');
+		$('.mvp, .pm__mvp, .btn__buy_mvp').removeClass('active');
+		$('.business, .pm__business, .btn__buy_business').addClass('active');
+		$('.detailing').removeClass('dt__concept');
+		$('.detailing').removeClass('dt__mvp');
+		$('.detailing').addClass('dt__business');
+	});
+
 	// radio btn click 
 	$('.label1').click(function() {
-		$('.packs').addClass('mobile__price');
-		$('.packs').removeClass('desktop__price');
-		$('.addons').addClass('mobile__price');
-		$('.addons').removeClass('desktop__price');
+		$('.section__packs').addClass('desktop__price');
+		$('.section__packs').removeClass('mobile__price');
 	});
 	$('.label2').click(function() {
-		$('.packs').addClass('desktop__price');
-		$('.packs').removeClass('mobile__price');
-		$('.addons').addClass('desktop__price');
-		$('.addons').removeClass('mobile__price');
+		$('.section__packs').addClass('mobile__price');
+		$('.section__packs').removeClass('desktop__price');
 	});
 
 	// modal form buy

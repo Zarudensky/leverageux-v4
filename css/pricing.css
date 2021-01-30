@@ -210,8 +210,8 @@
 .mobile__price .mobile {
   display: inline-flex;
 }
-.desktop__price .titles h6.delete_for_desktop,
-.mobile__price .titles h6.delete_for_moble,
+.desktop__price .titles p.delete_for_desktop,
+.mobile__price .titles p.delete_for_moble,
 .mobile__price .delete_for_moble,
 .desktop__price .delete_for_desktop,
 .mobile__price .desktop,
@@ -322,6 +322,9 @@
   font-weight: bold;
   line-height: 32px;
 }
+.pack__block .btn__buy {
+  max-width: 100%;
+}
 .btn__buy {
   width: 100%;
   max-width: 300px;
@@ -374,7 +377,7 @@
   margin-right: 10px;
 }
 
-.titles h6.mobile__title {
+.titles p.mobile__title {
   width: 115%;
   align-items: flex-end;
   flex-direction: column;
@@ -385,10 +388,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 260px;
+  width: 265px;
   margin-right: 30px;
 }
-.titles h6 {
+.titles p {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -400,10 +403,11 @@
   text-align: right;
   color: #4A4A4A;
 }
-.titles h6.blue {
+.titles p.blue {
   color: #00A2B8;
+  font-family: 'EkibastuzBlack';
 }
-.titles h6.first {
+.titles p.first {
   font-size: 30px;
   line-height: 30px;
   height: 80px;
@@ -416,7 +420,7 @@
 .detailing .pack__block {
   max-width: 250px;
   margin-right: 50px;
-  padding: 120px 25px 30px;
+  padding: 120px 0 30px;
 }
 .detailing .pack__block.mvp:before {
   content: none;
@@ -425,8 +429,7 @@
 .addons .pack__block:last-child {
   margin-right: 0;
 }
-.detailing .pack__block_title,
-.addons .pack__block_title {
+.detailing .pack__block_title {
   height: 80px;
   line-height: 80px;
   font-size: 20px;
@@ -452,20 +455,6 @@
 }
 .pack__block_info.none__border {
   border: none;
-}
-.info__title {
-  display: none;
-  font-family: 'EkibastuzBlack';
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: right;
-  text-transform: capitalize;
-  color: #4A4A4A;
-  text-align: center;
-}
-.info__title.blue {
-  color: #00A2B8;
 }
 .info__descr {
   font-weight: bold;
@@ -523,6 +512,7 @@
 
 .detailing .btn__buy {
   margin: 40px 0 0;
+  width: calc(100% - 50px);
 }
 .packs__lines {
   position: absolute;
@@ -549,24 +539,29 @@
 .addons .titles {
   width: 270px;
 }
-.addons .titles h6.first {
-  margin-bottom: 0;
+.addons .titles p.first {
+  height: 56px;
+  margin-bottom: 4px;
 }
 .addons .pack__block  {
   max-width: 250px;
   margin-right: 50px;
-  padding: 80px 25px 35px;
+  padding: 60px 0 35px;
 }
-
-
-
-#plan { display: none; }
+.addons .pack__block_title {
+  height: 56px;
+  line-height: 56px;
+  font-size: 20px;
+}
+.content .only__mobile_for_all, .addons__header,
+#plan, .packs__menu, .dots, .addons br { display: none; }
 
 @media screen and (max-width: 1330px) {
   .detailing .pack__blocks {
     max-width: 790px;
   }
 }
+
 @media screen and (max-width: 1220px) {
   .pricing__page .section__hero {
     height: calc(495px - 96px);
@@ -585,54 +580,228 @@
     margin-bottom: 50px;
   }
 }
+
 @media screen and (max-width: 1100px) {
-  .packs__lines, .titles {
+  .packs__lines, .packs .pack__block,
+  .detailing .pack__blocks .pack__block_info,
+  .content__section.section__packs .pack__block_title,
+  .pack__block.mvp:before,
+  .condition, .packs .titles p {
     display: none;
   }
-  .info__title {
-    display: inline;
-    margin-bottom: 10px;
+  .content .only__mobile_for_all,
+  .packs .titles p.show__for_all_packs,
+  .packs.dt__mvp .titles p.show__for_mvp_and_business,
+  .packs.dt__business .titles p.show__for_mvp_and_business,
+  .packs.dt__business .titles p.show__for_only_business {
+    display: flex;
   }
-  .info__check.check {
-    background: transparent;
-  }
-  .info__check.check:after {
-    content: url(../img/pricing/checked_mob.svg);
-  }
-  .mvp .info__check.check {
-    background: transparent;
-  }
-  .detailing .pack__block_info {
-    height: auto;
-    padding: 10px 0; 
-  }
-  .info__check.text {
-    line-height: 24px;
-  }
-  .packs, .addons {
+  .packs__container {
     width: 100%;
-    max-width: 540px;
-    justify-content: space-between;
+    max-width: 320px;
+    margin: 0;
   }
-  .section__packs_title {
-    margin-bottom: 40px;
-  }
-  .pack__blocks, .addons {
-    flex-direction: column;
+  .pack__blocks {
+    margin: 0;
     padding: 0;
-    margin-bottom: 60px;
+  }
+  .pack__block.active {
+    display: flex;
   }
   .pack__block {
     width: 100%;
     max-width: 100%;
-    margin: 0 0 20px;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
   }
-  .detailing .pack__block,
-  .addons .pack__block {
-    max-width: 100%;
+  .packs__menu { 
+    display: flex;
+    width: 100%;
+    border-bottom: 3px solid #DBDBDB;
+    margin-bottom: 38px;
+  }
+  .pm__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  .pm__block.active:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #00A2B8;
+  }
+  .pm__block.pm__mvp.active:after {
+    background:#bb11a3;
+  }
+  .pm__block_title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #828282;
+  }
+  .pm__block:hover .pm__block_title {
+    color: #00A2B8;
+  }
+  .pm__block.active .pm__block_title {
+    color: #00A2B8;
+    font-family: 'EkibastuzBlack';
+  }
+  .pm__block.pm__mvp.active .pm__block_title {
+    color: #bb11a3;
+  }
+  .pack__block_time {
+    margin-bottom: 34px;
+  }
+  .pack__block_descr {
+    margin-bottom: 20px;
+  }
+  .pack__block_price {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+  .pack__block_price span {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .pack__block .btn__buy {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+  .dots {
+    display: flex;
+    margin-bottom: 35px;
+  }
+  .dots p {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    margin: 0 20px;
+  }
+  .dots p.active {
+    width: 10px;
+    height: 10px;
+    background: #00A2B8;
+  }
+  .pack__container {
+    width: calc(100% - 40px);
+  }
+  .condition {
+    font-size: 12px;
+    line-height: 13px;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+  }
+  .mark {
+    min-width: 14px;
+    height: auto;
+    background: url(../img/pricing/checked_mob.svg) no-repeat;
+    margin-top: 0;
+    margin-right: 8px;
+  }
+  .packs .titles {
     margin-right: 0;
-    padding: 120px 25px 30px;
+    margin-bottom: 20px;
+    align-items: flex-start;
   }
+  .packs .titles p {
+    justify-content: flex-start;
+    font-family: 'Ekibastuz';
+    height: auto;
+    font-size: 12px;
+    line-height: 13px;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .packs .titles p:before {
+    content: url(../img/pricing/checked_mob.svg);
+    margin-right: 8px;
+    height: 13px;
+  }
+  .detailing {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .detailing .pack__block {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .addons .titles p.first {
+    display: none;
+  }
+  .addons {
+    flex-wrap: wrap;
+  }
+  .addons__header {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .addons__header p {
+    width: 100%;
+    max-width: 80px;
+    font-family: 'EkibastuzBlack';
+    font-size: 14px;
+    line-height: 14px;
+    color: #00A2B8;
+    text-align: center;
+  }
+  .addons__header p.first {
+    font-size: 24px;
+    line-height: 24px;
+    max-width: 160px;
+    text-align: left;
+  }
+
+  .addons .titles {
+    align-items: flex-start;
+    width: 100%;
+    max-width: 160px;
+    margin-right: 0;
+  }
+  .addons .pack__block {
+    max-width: 80px;
+    margin-right: 0;
+    padding: 0;
+  }
+  .addons br { display: inline; }
+  .addons .titles p {
+    justify-content: flex-start;
+    width: 100%;
+    height: 70px;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: left;
+    color: #4A4A4A;
+    border-bottom: 1px solid #E8E8E8;
+  }
+  .pack__block_info {
+    height: 70px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+  .info__descr {
+    font-size: 13px;
+    line-height: 13px;
+  } 
 }
 @media screen and (max-width: 1020px) {
   .section__ways {
@@ -674,46 +843,7 @@
     bottom: -35px;
   }
 }
-@media screen and (max-width: 590px) {
-  .packs {
-    max-width: 260px;
-    margin-bottom: 10px;
-  }
-  .addons {
-    max-width: 260px;
-  }
-  .section__packs_title {
-    font-size: 30px;
-  }
-  .pack__block {
-    padding: 100px 20px 6px;
-  }
-  .pack__block_title {
-    font-size: 18px;
-    line-height: 80px;
-  }
-  .pack__block_time {
-    margin-bottom: 20px;
-  }
-  .pack__block_descr {
-    height: auto;
-    font-size: 12px;
-    line-height: 16px;
-    margin-bottom: 20px;
-  }
-  .pack__block_price {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  .pack__block_price span {
-    font-size: 26px;
-  }
-  .condition {
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 20px;
-  }
-}
+
 @media screen and (max-width: 560px) {
   .pricing__page .section__hero {
     background-image: url(../img/pricing/hero_mob.png);
