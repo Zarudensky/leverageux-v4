@@ -210,6 +210,8 @@
 .mobile__price .mobile {
   display: inline-flex;
 }
+.desktop__price .packs.detailing.packs__container .titles p.delete_for_desktop,
+.mobile__price .packs.detailing.packs__container .titles p.delete_for_moble,
 .desktop__price .titles p.delete_for_desktop,
 .mobile__price .titles p.delete_for_moble,
 .mobile__price .delete_for_moble,
@@ -288,7 +290,8 @@
   background: linear-gradient(98.43deg, #8702C6 35.68%, #F1187D 103.79%);
 }
 .pack__block_time {
-  font-weight: bold;
+  font-family: 'EkibastuzBlack';
+  font-weight: normal;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.04em;
@@ -589,7 +592,7 @@
   .condition, .packs .titles p {
     display: none;
   }
-  .content .only__mobile_for_all,
+  .content p.only__mobile_for_all,
   .packs .titles p.show__for_all_packs,
   .packs.dt__mvp .titles p.show__for_mvp_and_business,
   .packs.dt__business .titles p.show__for_mvp_and_business,
