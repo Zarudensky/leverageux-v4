@@ -81,16 +81,4 @@ $(document).ready(function(){
 	    }, function(){
 	    $('#r__pink').removeClass('hover');
 	});
-
-	$('.slick__desktop').slick({
-		infinite: true,
-		slidesToShow: 5,
-		slidesToScroll: 1
-	});
-	$('.slick__mobile').slick({
-		infinite: true,
-		slidesToShow: 2,
-		slidesToScroll: 1
-	});
-
 });
