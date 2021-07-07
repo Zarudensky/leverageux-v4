@@ -19,7 +19,7 @@ $(document).ready(function(){
     dataLayer.push({
       'eventCategory': 'calendar',
       'eventAction': 'click',
-      'eventLabel': 'footer - Anton Korolik',
+      'eventLabel': 'footer - Anton Korolyk',
       'event': 'autoEvent',
     });
   });
