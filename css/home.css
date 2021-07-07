@@ -265,7 +265,7 @@
   font-size: 36px;
   line-height: 36px;
   letter-spacing: 0.01em;
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 36px;
 }
 .idea__block_title {
@@ -290,7 +290,6 @@
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.01em;
-  text-transform: capitalize;
   color: #737373;
   max-width: 250px;
   margin: 0 auto;
