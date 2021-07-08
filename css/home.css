@@ -582,19 +582,20 @@
 }
 
 .section__solutions {
-  margin-top: 100px;
+  margin-top: 60px;
   margin-bottom: 100px;
 }
 .section__solutions .section__title {
   font-size: 36px;
-  line-height: 21px;
-  margin-bottom: 20px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  margin-bottom: 36px;
   max-width: calc(100% - 30px);
 }
 .section__solutions .section__description {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.01em;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   color: #737373;
   max-width: calc(100% - 30px);
 }
@@ -691,9 +692,6 @@
   }
   .section__real {
     margin-top: 40px;
-  }
-  .section__solutions {
-    margin-top: 75px;
   }
   .section__idea {
     margin: 0 auto 50px auto;
